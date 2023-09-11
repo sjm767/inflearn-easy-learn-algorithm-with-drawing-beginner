@@ -4,9 +4,5 @@ function power(x,n){
     }
     return x * power(x,n-1);
 }
-
-let result = power(3,2);
-console.log(result);
-
-result = power(2,5);
-console.log(result);
+console.log(power(3,2));
+console.log(power(2,5));
