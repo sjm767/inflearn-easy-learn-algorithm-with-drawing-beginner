@@ -21,16 +21,17 @@ public class LinkedList {
 
   public void insertAt(int index, int data) {
     Node newNode = new Node(data);
-    count++;
 
     if (head == null) {
       this.head = newNode;
+      this.count++;
       return;
     }
 
     if (index == 0) {
       newNode.next = this.head;
       this.head = newNode;
+      this.count++;
       return;
     }
 
@@ -48,6 +49,7 @@ public class LinkedList {
       newNode.next = currentNode.next;
     }
     currentNode.next = newNode;
+    this.count++;
   }
 
   public void insertLast(int data) {
