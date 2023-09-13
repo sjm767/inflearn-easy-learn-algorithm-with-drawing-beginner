@@ -45,6 +45,7 @@ public class LinkedList {
       currentNode = currentNode.next;
       currentIdx++;
     }
+    //마지막 노드가 아닌 경우
     if (currentNode.next != null) {
       newNode.next = currentNode.next;
     }
@@ -57,9 +58,12 @@ public class LinkedList {
   }
 
   public Node deleteAt(int index) {
+    //연결리스트가 비었으면 null리턴
     if (this.head == null) {
       return null;
     }
+
+    //인덱스 범위를 초과하면 마지막 인덱스 읽기
     if (index >= count) {
       return deleteLast();
     }
