@@ -1,9 +1,8 @@
-package com.jaeshim.inflearn.easylearn.algorithm.drawing.code;
+package com.jaeshim.inflearn.easylearn.algorithm.drawing.datastructure.code;
 
 public class LinkedList {
-
   public int count;
-  public Node head;
+  private Node head;
 
   public LinkedList() {
     this.head = null;
@@ -110,3 +109,5 @@ public class LinkedList {
     return currentNode;
   }
 }
+
+

@@ -1,4 +1,4 @@
-package com.jaeshim.inflearn.easylearn.algorithm.drawing.code;
+package com.jaeshim.inflearn.easylearn.algorithm.drawing.datastructure.code;
 
 public class Node {
 

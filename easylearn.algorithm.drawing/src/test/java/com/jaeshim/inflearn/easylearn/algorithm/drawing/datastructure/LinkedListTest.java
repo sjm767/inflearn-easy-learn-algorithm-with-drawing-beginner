@@ -1,9 +1,9 @@
-package com.jaeshim.inflearn.easylearn.algorithm.drawing;
+package com.jaeshim.inflearn.easylearn.algorithm.drawing.datastructure;
 
 import static org.assertj.core.api.Assertions.*;
 
-import com.jaeshim.inflearn.easylearn.algorithm.drawing.code.LinkedList;
-import com.jaeshim.inflearn.easylearn.algorithm.drawing.code.Node;
+import com.jaeshim.inflearn.easylearn.algorithm.drawing.datastructure.code.LinkedList;
+import com.jaeshim.inflearn.easylearn.algorithm.drawing.datastructure.code.Node;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
