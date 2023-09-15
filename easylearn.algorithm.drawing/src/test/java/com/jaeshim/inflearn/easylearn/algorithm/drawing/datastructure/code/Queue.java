@@ -8,24 +8,28 @@ public class Queue {
     this.linkedList = new DoublyLinkedList();
   }
 
-  public void enqueue(int data){
-    linkedList.insertAt(0,data);
+  public void enqueue(int data) {
+    linkedList.insertAt(0, data);
   }
 
-  public Integer deque(){
+  public Integer deque() {
     DoubleNode node = linkedList.deleteLast();
-    if(node == null){
+    if (node == null) {
       return null;
     }
     return node.data;
   }
 
-  public Integer front(){
-    return linkedList.readAt(linkedList.count-1).data;
+  public Integer front() {
+    return linkedList.readAt(linkedList.count - 1).data;
   }
 
-  public boolean isEmpty(){
-    return  false;
+  public void printAll() {
+    linkedList.printAll();
+  }
+
+  public boolean isEmpty() {
+    return linkedList.count == 0;
   }
 
 }
