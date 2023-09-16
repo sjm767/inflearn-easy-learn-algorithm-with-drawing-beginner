@@ -3,6 +3,7 @@ package com.jaeshim.inflearn.easylearn.algorithm.drawing.algorithm;
 import static org.assertj.core.api.Assertions.*;
 
 import com.jaeshim.inflearn.easylearn.algorithm.drawing.algorithm.code.Recursion;
+import java.util.HashMap;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -42,10 +43,11 @@ class RecursionTest {
     assertThat(result2).isEqualTo(28);
     assertThat(result3).isEqualTo(18);
   }
+
   @Test
   @DisplayName("문자열의 길이 게산. (char 배열)")
-  void strLengthChar(){
-    char[] str = {'H','e','l','l','o'};
+  void strLengthChar() {
+    char[] str = {'H', 'e', 'l', 'l', 'o'};
 
     int result = Recursion.strLength(str);
 
@@ -54,7 +56,7 @@ class RecursionTest {
 
   @Test
   @DisplayName("문자열의 길이 게산. (String)")
-  void strLengthString(){
+  void strLengthString() {
     String str = "jaeshim";
 
     int result = Recursion.strLength(str);
@@ -64,7 +66,7 @@ class RecursionTest {
 
   @Test
   @DisplayName("지수함수")
-  void power(){
+  void power() {
     int num = 2;
     int pow = 5;
 
@@ -75,5 +77,44 @@ class RecursionTest {
     pow = 2;
     result = Recursion.power(num, pow);
     assertThat(result).isEqualTo(9);
+  }
+
+  @Test
+  @DisplayName("하노이의 탑")
+  void hanoi() {
+    int count = 3;
+    String from = "A";
+    String to = "C";
+    String temp = "B";
+
+    Recursion.hanoi(count, from, to, temp);
+
+  }
+
+  @Test
+  @DisplayName("피보나치 버전1 : 중복계산")
+  void fibonacci1(){
+    int n = 5;
+
+    int result = Recursion.fibonacci1(n);
+    assertThat(result).isEqualTo(5);
+  }
+
+  @Test
+  @DisplayName("피보나치 버전2 : 메모이제이션")
+  void fibonacci2(){
+    int n = 6;
+
+    int result = Recursion.fibonacci2(n,new HashMap<>());
+    assertThat(result).isEqualTo(8);
+  }
+
+  @Test
+  @DisplayName("피보나치 버전3 : 타뷸레이션")
+  void fibonacci3(){
+    int n = 7;
+
+    int result = Recursion.fibonacci3(n);
+    System.out.println("result = " + result);
   }
 }
