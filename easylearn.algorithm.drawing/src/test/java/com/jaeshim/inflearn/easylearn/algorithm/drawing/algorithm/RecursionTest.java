@@ -93,28 +93,48 @@ class RecursionTest {
 
   @Test
   @DisplayName("피보나치 버전1 : 중복계산")
-  void fibonacci1(){
-    int n = 5;
+  void fibonacci1() {
+    int n = 40;
+
+    long startTime = System.currentTimeMillis();
 
     int result = Recursion.fibonacci1(n);
-    assertThat(result).isEqualTo(5);
+
+    long endTime = System.currentTimeMillis();
+    System.out.println("Elapsed Time: " + (endTime - startTime) + "ms");
+
+    assertThat(result).isEqualTo(102334155);
+
   }
 
   @Test
   @DisplayName("피보나치 버전2 : 메모이제이션")
-  void fibonacci2(){
-    int n = 6;
+  void fibonacci2() {
+    int n = 40;
 
-    int result = Recursion.fibonacci2(n,new HashMap<>());
-    assertThat(result).isEqualTo(8);
+    long startTime = System.currentTimeMillis();
+
+    int result = Recursion.fibonacci2(n, new HashMap<>());
+
+    long endTime = System.currentTimeMillis();
+    System.out.println("Elapsed Time: " + (endTime - startTime) + "ms");
+
+    assertThat(result).isEqualTo(102334155);
   }
 
   @Test
   @DisplayName("피보나치 버전3 : 타뷸레이션")
-  void fibonacci3(){
-    int n = 7;
+  void fibonacci3() {
+    int n = 40;
+
+    long startTime = System.currentTimeMillis();
 
     int result = Recursion.fibonacci3(n);
-    System.out.println("result = " + result);
+    assertThat(result).isEqualTo(102334155);
+
+    long endTime = System.currentTimeMillis();
+    System.out.println("Elapsed Time: " + (endTime - startTime) + "ms");
+
+    assertThat(result).isEqualTo(102334155);
   }
 }
