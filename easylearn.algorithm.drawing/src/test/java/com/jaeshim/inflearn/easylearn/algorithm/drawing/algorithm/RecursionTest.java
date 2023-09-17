@@ -137,4 +137,5 @@ class RecursionTest {
 
     assertThat(result).isEqualTo(102334155);
   }
+
 }

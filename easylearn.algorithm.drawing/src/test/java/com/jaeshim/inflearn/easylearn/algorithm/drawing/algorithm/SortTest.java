@@ -50,4 +50,28 @@ class SortTest {
 
     assertThat(Arrays.equals(arr,expect)).isTrue();
   }
+
+  @Test
+  @DisplayName("병합 정렬")
+  void mergeSort(){
+    int arr[] = {5,3,2,4,1,7,8,6};
+    int expect[] = {1,2,3,4,5,6,7,8};
+
+    Sort.mergeSort(arr,0, arr.length-1);
+
+    assertThat(Arrays.equals(arr,expect)).isTrue();
+
+  }
+
+  @Test
+  @DisplayName("퀵 정렬")
+  void quickSort(){
+    int arr[] = {5,3,7,2,6,4,9,1,8};
+    int expect[] = {1,2,3,4,5,6,7,8,9};
+
+    Sort.quickSort(arr,0,arr.length-1);
+
+    assertThat(Arrays.equals(arr,expect)).isTrue();
+
+  }
 }
